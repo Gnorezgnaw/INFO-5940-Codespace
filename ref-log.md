@@ -1,44 +1,43 @@
+# Reference Log (ref-log.md)
 
----
-
-## ref-log.md
-
-```markdown
-# Reference Log
-
-## External Sources and Tools
+## External Sources and Tools Used
 
 - **OpenAI API (Cornell Gateway)**  
-  Used to run GPT-4o and embeddings (`text-embedding-3-large`).  
-  Base URL: `https://api.ai.it.cornell.edu`.
+  Used to run GPT-4o for answering questions and `text-embedding-3-large` for building embeddings.  
+  Endpoint: `https://api.ai.it.cornell.edu`.
 
 - **LangChain**  
-  Framework for chaining LLM calls, prompts, and retrieval components.  
+  Framework used for:
+  - Document loading (`TextLoader`, `PyPDFLoader`).
+  - Text chunking (`RecursiveCharacterTextSplitter`).
+  - Prompt construction (`PromptTemplate`).
+  - Integrating retriever with the LLM.
 
 - **Chroma**  
-  Vector database for semantic retrieval of text chunks.  
+  Vector store used for semantic search and retrieval-augmented generation (RAG).
 
 - **pypdf / PyPDFLoader**  
-  For extracting text from uploaded PDF files.  
+  For parsing uploaded PDF files and extracting their content into LangChain documents.
 
 - **Streamlit**  
-  Framework for building the interactive web app interface.
+  Used as the web application framework to provide interactive UI for file uploads, chat input, and streamed responses.
 
 ---
 
-## GenAI Usage Documentation
+## GenAI Usage
 
 - **GitHub Copilot**  
-  - Used to help debug code issues and refine UI elements.  
-  - Suggested improvements to the Streamlit chat components.  
-  - Assisted in wiring LangChain RAG pipeline with minimal boilerplate.
+  - Helped debug errors during development.  
+  - Suggested UI refinements for the Streamlit chat interface.  
+  - Assisted with boilerplate around session state handling.
 
 - **ChatGPT**  
-  - Helped write documentation files (`README.md`, `ref-log.md`).  
+  - Helped draft this documentation (`README.md` and `ref-log.md`).  
+  - Provided sample code patterns for RAG and streaming.  
 
 ---
 
 ## Notes
 
-All GenAI usage was limited to **code scaffolding, debugging hints, and documentation drafting**.  
-Final logic and testing were conducted manually by the developer to ensure correctness.
+- GenAI contributions were limited to **debugging, scaffolding, and documentation writing**.  
+- All substantive design decisions, configuration, and validation of correctness were made by the developer.  

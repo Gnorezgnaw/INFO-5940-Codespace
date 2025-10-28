@@ -23,6 +23,8 @@ The application integrates **OpenAI models** (via Cornell's AI Gateway) with **L
 ```bash
 git clone <your-repo-url>
 cd <your-repo>
+```
+---
 
 ## Running a Streamlit App on Codespaces  
 Follow these steps to launch and view your Streamlit app in GitHub Codespaces:
